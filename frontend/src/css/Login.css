@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    background-color: coral;}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #b30808 0%, #ff0047 100%) 0 0 no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: left;
+    font: normal normal normal 45px/56px Square721 BT;
+    letter-spacing: 0;
+    color: #444444;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 1em;
+    justify-content: flex-end;
+}
+
+.logo > img{
+    height: 40vh;
+    margin-bottom: 0;
+    margin-left: 1%;
+}
+
+.logo > div{
+    margin-left: 1em;
+
+    font-size: 30px;
+    color:white;
+}
+
+.login-container{
+    width: 50%;
+
+}
+
+form.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60vh;
+    background: #2B2D426D 0 0 no-repeat padding-box;
+    box-shadow: 0 5px 6px #00000029;
+    border-radius: 74px;
+    margin-bottom: 1em;
+}
+form.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 75vh;
+    background: #2B2D426D 0 0 no-repeat padding-box;
+    box-shadow: 0 5px 6px #00000029;
+    border-radius: 74px;
+}
+
+.login>div{
+    font: normal normal normal 20px/27px Segoe UI;
+    font-size: 30px;
+}
+
+.Register>div{
+    font: normal normal normal 20px/27px Segoe UI;
+    font-size: 30px;
+}
+
+button{
+    margin-bottom: 1em;
+}
+
+.no-valid {
+    border:3px solid red;
+    border-radius: 20px;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+button{
+    background: rgba(250, 213, 213, 0.83) 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    color: #707070;
+    margin-top: 1em;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
+input, textarea {
+    width: 30vw;
+    height: 5vh;
+    background: #F0F0F0 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.login-banner{
+    margin-bottom: 1em;
+    color: white;
+}
+
+.enter-form{
+    margin-bottom: 1em;
+    height: 10%;
+}
+
+.upload-file{
+    font: normal normal normal 30px/31px Segoe UI;
+    color: #cdcdcd;
+}
+
+.login-button{
+    border-radius:20px
+}
