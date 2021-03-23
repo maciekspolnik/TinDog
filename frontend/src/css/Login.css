@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    background-color: coral;}
+}
 
 .container {
     width: 100vw;
     height: 100vh;
-    background: transparent linear-gradient(180deg, #b30808 0%, #ff0047 100%) 0 0 no-repeat padding-box;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,7 +45,7 @@ a{
 }
 
 .login-container{
-    width: 50%;
+    width: 100%;
 
 }
 
@@ -54,11 +54,11 @@ form.login{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     height: 60vh;
     background: #2B2D426D 0 0 no-repeat padding-box;
     box-shadow: 0 5px 6px #00000029;
-    border-radius: 74px;
+    border-radius: 40px;
     margin-bottom: 1em;
 }
 form.register{
@@ -87,20 +87,14 @@ button{
     margin-bottom: 1em;
 }
 
-.no-valid {
-    border:3px solid red;
-    border-radius: 20px;
-    box-shadow: 0 0 0.2em red;
-    outline: none;
-}
 
 button{
     background: rgba(250, 213, 213, 0.83) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
-    width: 30vw;
+    width: 25vw;
     height: 5vh;
     border: none;
-    color: #707070;
+    color: #212121;
     margin-top: 1em;
     font-size: 20px;
     justify-content: center;
@@ -108,8 +102,8 @@ button{
     border-radius: 20px;
 }
 input, textarea {
-    width: 30vw;
-    height: 5vh;
+    width: 25vw;
+    height: 4vh;
     background: #F0F0F0 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     border: none;

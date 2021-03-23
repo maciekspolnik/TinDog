@@ -9,7 +9,7 @@ class LogoText extends Component{
     my_style={
 
         font: "normal normal normal 45px/56px Segoe UI",
-        color: "#444444",
+        color: "#ffffff",
         fontSize: "35px"
 
 };

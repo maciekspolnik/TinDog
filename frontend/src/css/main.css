@@ -48,7 +48,7 @@ body{
     display: flex;
 }
 .banner{
-    width:20%;
+    width: 20%;
     height: 70%;
     margin-top: 1em;
     border-radius: 20px;
@@ -79,7 +79,6 @@ body{
 }
 .icon{
     display: block;
-    height:20px;
     margin-left: auto;
     margin-right: auto;
 }
