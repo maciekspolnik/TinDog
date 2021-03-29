@@ -7,13 +7,11 @@ import minus from "../../minus.png"
 import bone from "../../bone.png"
 
 
-
-class Bottom extends Component{
-
+class Bottom extends Component {
 
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="bottom">
                 <div className="swipe_block">
                     <div className="swipe_click"><img className="icon" src={plus}/></div>

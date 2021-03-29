@@ -12,7 +12,7 @@ body {
     align-items: center;
 }
 
-.logo{
+.logo {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -25,31 +25,31 @@ body {
     color: #444444;
 }
 
-a{
+a {
     text-decoration: none;
     margin-top: 1em;
     justify-content: flex-end;
 }
 
-.logo > img{
+.logo > img {
     height: 40vh;
     margin-bottom: 0;
     margin-left: 1%;
 }
 
-.logo > div{
+.logo > div {
     margin-left: 1em;
 
     font-size: 30px;
-    color:white;
+    color: white;
 }
 
-.login-container{
+.login-container {
     width: 100%;
 
 }
 
-form.login{
+form.login {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,8 @@ form.login{
     border-radius: 40px;
     margin-bottom: 1em;
 }
-form.register{
+
+form.register {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,22 +74,22 @@ form.register{
     border-radius: 74px;
 }
 
-.login>div{
+.login > div {
     font: normal normal normal 20px/27px Segoe UI;
     font-size: 30px;
 }
 
-.Register>div{
+.Register > div {
     font: normal normal normal 20px/27px Segoe UI;
     font-size: 30px;
 }
 
-button{
+button {
     margin-bottom: 1em;
 }
 
 
-button{
+button {
     background: rgba(250, 213, 213, 0.83) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     width: 25vw;
@@ -101,6 +102,7 @@ button{
     text-align: center;
     border-radius: 20px;
 }
+
 input, textarea {
     width: 25vw;
     height: 4vh;
@@ -112,21 +114,21 @@ input, textarea {
     margin-bottom: 1em;
 }
 
-.login-banner{
+.login-banner {
     margin-bottom: 1em;
     color: white;
 }
 
-.enter-form{
+.enter-form {
     margin-bottom: 1em;
     height: 10%;
 }
 
-.upload-file{
+.upload-file {
     font: normal normal normal 30px/31px Segoe UI;
     color: #cdcdcd;
 }
 
-.login-button{
-    border-radius:20px
+.login-button {
+    border-radius: 20px
 }

@@ -3,8 +3,8 @@ import Input from "./input";
 import Button from "./button";
 
 
-class LoginForm extends Component{
-    render(){
+class LoginForm extends Component {
+    render() {
         return (<div className="login-container">
             <form className="login">
                 <div className="login-banner">Zaloguj się</div>

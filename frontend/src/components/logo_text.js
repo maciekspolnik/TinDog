@@ -3,19 +3,19 @@ import logo from '../logo.png';
 import Register from "../views/Register";
 
 
-class LogoText extends Component{
+class LogoText extends Component {
 
 
-    my_style={
+    my_style = {
 
         font: "normal normal normal 45px/56px Segoe UI",
         color: "#ffffff",
         fontSize: "35px"
 
-};
+    };
 
-    render(){
-        return( <div style={this.my_style}>Tu znajdziecie ze swoim czworonogiem towarzystwo na wspólne spacery</div>
+    render() {
+        return (<div style={this.my_style}>Tu znajdziecie ze swoim czworonogiem towarzystwo na wspólne spacery</div>
         );
     }
 }

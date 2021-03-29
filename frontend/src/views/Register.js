@@ -4,28 +4,28 @@ import '../css/Login.css';
 import RegisterForm from "../components/register form";
 import LogoText from "../components/logo_text";
 
-class Register extends Component{
+class Register extends Component {
 
-  render(){
-    return (
-        <div>
+    render() {
+        return (
+            <div>
 
-          <head>
-            <title>REGISTER</title>
-          </head>
+                <head>
+                    <title>REGISTER</title>
+                </head>
 
-          <body>
-          <div className="container">
-              <div className="logo">
-                  <Logo/>
-                  <LogoText />
-              </div>
-            <RegisterForm />
-          </div>
-          </body>
-        </div>
-            );
-  }
+                <body>
+                <div className="container">
+                    <div className="logo">
+                        <Logo/>
+                        <LogoText/>
+                    </div>
+                    <RegisterForm/>
+                </div>
+                </body>
+            </div>
+        );
+    }
 }
 
 export default Register;
