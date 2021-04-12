@@ -6,13 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7ed3b5-e393-4321-ba08-3e8511b06b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/little_logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/little_logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/login form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/login form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/logo_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/logo_text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/main/bottom.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/main/bottom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/main/topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/main/topbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/picture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/text_link.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/text_link.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/List.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +65,22 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.demo" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.repository" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
@@ -81,7 +106,7 @@
       <workItem from="1617047746485" duration="936000" />
       <workItem from="1617082235539" duration="3916000" />
       <workItem from="1617970009159" duration="5402000" />
-      <workItem from="1618217829624" duration="2187000" />
+      <workItem from="1618217829624" duration="12852000" />
     </task>
     <servers />
   </component>

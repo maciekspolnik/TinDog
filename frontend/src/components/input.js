@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Register from "../views/Register";
 
 
 class Input extends Component {

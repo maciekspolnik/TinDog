@@ -1,20 +1,15 @@
 import React, {Component} from 'react';
 import logo from '../logo.png';
-import Register from "../views/Register";
+import {Link} from "react-router-dom";
 
 
 class Logo extends Component {
-    little_logo = {
-        height: "100px",
-        width: "100px"
-    };
-
 
     render() {
         return (
-            <div className="logo">
+            <Link to="/" className="logo">
                 <img src={logo} alt=""/>
-            </div>);
+            </Link>);
     }
 }
 

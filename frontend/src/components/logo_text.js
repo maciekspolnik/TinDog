@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import logo from '../logo.png';
-import Register from "../views/Register";
-
 
 class LogoText extends Component {
 

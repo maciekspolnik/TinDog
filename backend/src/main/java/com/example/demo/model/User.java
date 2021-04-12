@@ -10,6 +10,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(name="email")
+    private String email;
+
+    @Column(name="password")
+    private String password;
+
     @Column(name="first_name")
     private String firstName;
 
@@ -19,16 +25,29 @@ public class User {
     @Column(name="contact")
     private String contact;
 
+    @Column(name="photo")
+    private String photo_url;
+
+    @Column(name="dog_photo")
+    private String dog_photo_url;
+
+    @Column(name="age")
+    private String age;
+
     public User(){
 
     }
 
-    public User(String firstName, String lastName, String contact) {
+    public User(String email, String password, String firstName, String lastName, String contact, String photo_url, String dog_photo_url, String age) {
+        this.email = email;
+        this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.contact = contact;
+        this.photo_url = photo_url;
+        this.dog_photo_url = dog_photo_url;
+        this.age = age;
     }
-
 
     public Long getId() {
         return id;
@@ -62,4 +81,25 @@ public class User {
         this.contact = contact;
     }
 
+    public void setId(long id) { this.id = id; }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
+
+    public String getPhoto_url() { return photo_url; }
+
+    public void setPhoto_url(String photo_url) { this.photo_url = photo_url; }
+
+    public String getDog_photo_url() { return dog_photo_url; }
+
+    public void setDog_photo_url(String dog_photo_url) { this.dog_photo_url = dog_photo_url; }
+
+    public String getAge() { return age; }
+
+    public void setAge(String age) { this.age = age; }
 }

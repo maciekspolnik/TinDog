@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Picture from "../picture";
 import banner from "../../img.jpg"
 
 class Middle extends Component {
@@ -9,7 +8,7 @@ class Middle extends Component {
         return (
             <div className="middle">
                 <div className="name_block">Felo</div>
-                <img className="banner" src={banner}/>
+                <img className="banner" src={banner} alt=""/>
             </div>
         );
     }

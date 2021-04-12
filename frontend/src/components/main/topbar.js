@@ -2,19 +2,25 @@ import React, {Component} from 'react';
 import '../../css/main.css';
 import LittleLogo from "../little_logo";
 import Picture from "../picture";
-import UserService from "../../services/UserService";
+import {Link} from "react-router-dom";
 
 
 class TopBar extends Component {
 
-
+    style={
+        textDecoration: "none",
+        color: "black"
+    }
 
     render() {
         return (
             <header className="topbar">
                 <LittleLogo/>
                 <div className="profile">
-                    <div>Imie Nazwisko</div>
+                    <Link style={this.style} to="/login">
+                        Imie Nazwisko
+                    </Link>
+
                     <Picture/>
                 </div>
             </header>

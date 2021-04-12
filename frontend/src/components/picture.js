@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import face from '../face.png';
-import Register from "../views/Register";
 
 
 class Picture extends Component {
