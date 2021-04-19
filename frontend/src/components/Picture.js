@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import face from '../face.png';
+import face from '../multimedia/face.png';
 
 
 class Picture extends Component {
     little_logo = {
         height: "80px",
         width: "80px",
-        marginLeft: "1em"
+        marginLeft: "0.5em"
     };
 
 

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import '../../css/main.css';
-import plus from "../../add.png"
-import minus from "../../minus.png"
-import bone from "../../bone.png"
+import plus from "../../multimedia/add.png"
+import minus from "../../multimedia/minus.png"
+import bone from "../../multimedia/bone.png"
 
 
 class Bottom extends Component {

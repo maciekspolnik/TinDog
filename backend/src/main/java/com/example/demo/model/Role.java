@@ -8,29 +8,30 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_role;
 
-    @Column(name="idUser")
-    private Long idUser;
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="id_user")
+    private User idUser;
 
-    @Column(name="roleName")
+    @Column(name="role_name")
     private String roleName;
 
     public Role() {
     }
 
-    public Role(Long idUser, String roleName) {
+    public Role(User idUser, String roleName) {
         this.idUser = idUser;
         this.roleName = roleName;
     }
 
-    public Long getId() { return id; }
+    public Long getId() { return id_role; }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) { this.id_role = id; }
 
-    public Long getIdUser() { return idUser; }
+    public Long getIdUser() { return idUser.getId(); }
 
-    public void setIdUser(Long idUser) { this.idUser = idUser; }
+    public void setIdUser(User idUser) { this.idUser = idUser; }
 
     public String getRoleName() { return roleName; }
 

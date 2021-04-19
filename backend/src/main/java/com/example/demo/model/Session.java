@@ -8,10 +8,11 @@ public class Session {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_session;
 
-    @Column(name="id_user")
-    private Long id_user;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="id_user")
+    private User id_user;
 
     @Column(name="token")
     private String token;
@@ -22,19 +23,19 @@ public class Session {
     public Session() {
     }
 
-    public Session(Long id_user, String token, String expiration) {
+    public Session(User id_user, String token, String expiration) {
         this.id_user = id_user;
         this.token = token;
         this.expiration = expiration;
     }
 
-    public Long getId() { return id; }
+    public Long getId() { return id_session; }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) { this.id_session = id; }
 
-    public Long getId_user() { return id_user; }
+    public User getId_user() { return id_user; }
 
-    public void setId_user(Long id_user) { this.id_user = id_user; }
+    public void setId_user(User id_user) { this.id_user = id_user; }
 
     public String getToken() { return token; }
 

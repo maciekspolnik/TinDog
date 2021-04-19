@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Input from "./input";
-import Button from "./button";
+import Input from "../Input";
+import Button from "../Button";
 
 
 class RegisterForm extends Component {

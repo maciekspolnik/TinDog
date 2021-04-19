@@ -3,7 +3,7 @@ import '../css/Login.css';
 import '../css/main.css'
 import TopBar from "../components/main/topbar";
 import UserComponent from "../components/UserComponent";
-import BotBar from "../components/botBar";
+import BotBar from "../components/BotBar";
 
 class List extends Component {
 

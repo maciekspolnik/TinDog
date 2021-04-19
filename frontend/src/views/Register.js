@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Logo from '../components/logo';
+import Logo from '../components/Logo';
 import '../css/Login.css';
-import RegisterForm from "../components/register form";
-import LogoText from "../components/logo_text";
+import RegisterForm from "../components/register/RegisterForm";
+import LogoText from "../components/LogoText";
 
 class Register extends Component {
 

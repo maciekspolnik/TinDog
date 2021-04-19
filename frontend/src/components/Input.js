@@ -2,8 +2,13 @@ import React, {Component} from 'react';
 
 
 class Input extends Component {
+
+    style={
+        height: '10%'
+    }
+
     render() {
-        return <input className="enter-form" name={this.props.name} type={this.props.type}
+        return <input className="enter-form" style={this.style} name={this.props.name} type={this.props.type}
                       placeholder={this.props.placeholder}/>
     }
 }

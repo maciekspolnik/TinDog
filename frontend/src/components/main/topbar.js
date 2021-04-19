@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/main.css';
-import LittleLogo from "../little_logo";
-import Picture from "../picture";
+import LittleLogo from "../LittleLogo";
+import Picture from "../Picture";
 import {Link} from "react-router-dom";
 
 
@@ -9,7 +9,10 @@ class TopBar extends Component {
 
     style={
         textDecoration: "none",
-        color: "black"
+        color: "black",
+        fontSize: "26px",
+        marginTop: "auto",
+        marginBottom: "auto"
     }
 
     render() {

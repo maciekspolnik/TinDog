@@ -8,13 +8,14 @@ public class Matches {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_matches;
 
-    @Column(name="id_matched_who")
-    private Long id_matched_who;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id_matched_who")
+    private User id_user;
 
     @Column(name="id_matched_whom")
-    private Long id_matched_whom;
+    private Long id_matched;
 
     @Column(name="time_to_expire")
     private Long time_to_expire;
@@ -22,23 +23,23 @@ public class Matches {
     public Matches() {
     }
 
-    public Matches(Long id_matched_who, Long id_matched_whom, Long time_to_expire) {
-        this.id_matched_who = id_matched_who;
-        this.id_matched_whom = id_matched_whom;
+    public Matches(User user, Long id_matched_whom, Long time_to_expire) {
+        this.id_user = user;
+        this.id_matched = id_matched_whom;
         this.time_to_expire = time_to_expire;
     }
 
-    public Long getId() { return id; }
+    public Long getId() { return id_matches; }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) { this.id_matches = id; }
 
-    public Long getId_matched_who() { return id_matched_who; }
+    public Long getIdUser() { return id_user.getId(); }
 
-    public void setId_matched_who(Long id_matched_who) { this.id_matched_who = id_matched_who; }
+    public void setIdUser(User id_user) { this.id_user = id_user; }
 
-    public Long getId_matched_whom() { return id_matched_whom; }
+    public Long getId_matched() { return id_matched; }
 
-    public void setId_matched_whom(Long id_matched_whom) { this.id_matched_whom = id_matched_whom; }
+    public void setId_matched(Long id_matched) { this.id_matched = id_matched; }
 
     public Long getTime_to_expire() { return time_to_expire; }
 

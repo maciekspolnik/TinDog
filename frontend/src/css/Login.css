@@ -92,7 +92,7 @@ button {
 button {
     background: rgba(250, 213, 213, 0.83) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
-    width: 25vw;
+    width: 90%;
     height: 5vh;
     border: none;
     color: #212121;
@@ -103,8 +103,13 @@ button {
     border-radius: 20px;
 }
 
+.login-banner {
+    margin-bottom: 1em;
+    color: white;
+}
+
 input, textarea {
-    width: 25vw;
+    width: 90%;
     height: 4vh;
     background: #F0F0F0 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
@@ -114,21 +119,12 @@ input, textarea {
     margin-bottom: 1em;
 }
 
-.login-banner {
-    margin-bottom: 1em;
-    color: white;
-}
-
-.enter-form {
-    margin-bottom: 1em;
-    height: 10%;
-}
-
 .upload-file {
     font: normal normal normal 30px/31px Segoe UI;
-    color: #cdcdcd;
-}
+    text-decoration: none;
+    color: black;
 
-.login-button {
-    border-radius: 20px
+}
+.upload-file:hover{
+    text-decoration: none;
 }

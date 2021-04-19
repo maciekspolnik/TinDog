@@ -8,10 +8,11 @@ public class Settings {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_settings;
 
-    @Column(name="IdUser")
-    private Long idUser;
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="id_user")
+    private User id_user;
 
     @Column(name="range")
     private Long range;
@@ -25,19 +26,19 @@ public class Settings {
     public Settings() {
     }
 
-    public Settings(Long idUser,Long range, Long expiration, Long resetOnLogin) {
-        this.idUser = idUser;
+    public Settings(User id_user,Long range, Long expiration, Long resetOnLogin) {
+        this.id_user = id_user;
         this.range = range;
         this.expiration = expiration;
         this.resetOnLogin = resetOnLogin;
     }
 
     public Long getIdUser() {
-        return idUser;
+        return id_user.getId();
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setIdUser(User id_user) {
+        this.id_user = id_user;
     }
 
     public Long getRange() {
@@ -64,7 +65,7 @@ public class Settings {
         this.resetOnLogin = resetOnLogin;
     }
 
-    public void setId(Long id) { this.id = id; }
+    public void setId(Long id) { this.id_settings = id; }
 
-    public Long getId() { return id; }
+    public Long getId() { return id_settings; }
 }

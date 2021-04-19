@@ -21,9 +21,6 @@ public class DemoApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-	private UserRepository userRepository;
-
-	@Autowired
 	private LogsRepository logsRepository;
 
 	@Override
