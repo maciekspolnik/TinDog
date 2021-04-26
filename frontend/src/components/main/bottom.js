@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import '../../css/main.css';
-import plus from "../../multimedia/add.png"
-import minus from "../../multimedia/minus.png"
-import bone from "../../multimedia/bone.png"
-
 
 class Bottom extends Component {
 
@@ -12,9 +8,9 @@ class Bottom extends Component {
         return (
             <div className="bottom">
                 <div className="swipe_block">
-                    <div className="swipe_click"><img className="icon" alt="" src={plus}/></div>
-                    <div className="swipe_click"><img className="icon" alt="" src={bone}/></div>
-                    <div className="swipe_click"><img className="icon" alt="" src={minus}/></div>
+                    <div className="swipe_click"><img className="icon" alt="" src={"./icons/plus.png"}/></div>
+                    <div className="swipe_click"><img className="icon" alt="" src={"./icons/bone.png"}/></div>
+                    <div className="swipe_click"><img className="icon" alt="" src={"./icons/minus.png"}/></div>
 
                 </div>
             </div>

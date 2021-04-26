@@ -10,7 +10,12 @@ class UserComponent extends React.Component {
         font:"Segoe UI",
         marginLeft: "auto",
         marginRight: "auto",
-        marginTop: "5vh"
+        marginTop: "5vh",
+        verticalAlign:'middle'
+    }
+
+    photoStyle={
+        height:'100px'
     }
 
     constructor(props) {
@@ -24,20 +29,22 @@ class UserComponent extends React.Component {
     render(){
         return (
             <React.Fragment>
-                <table className={" table table-stripped"} style={this.tableStyles}>
-                    <thead style={{fontWeight:"bold",fontSize:"20px"}}>
+                <table className={"table table-stripped"} style={this.tableStyles}>
+                    <thead style={{fontWeight:"bold",fontSize:"20px",textAlign:'center'}}>
                         <tr>
-                            <td>Imię</td>
-                            <td>Nazwisko</td>
-                            <td>Kontakt</td>
+                            <td className='cell'>Zdjęcie</td>
+                            <td style={{verticalAlign:'middle'}}>Imię Psa</td>
+                            <td className='cell'>Imię i Nazwisko</td>
+                            <td className='cell'>Kontakt</td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style ={{textAlign:'center', fontSize:"20px"}}>
                     {this.state.users.map(user=>
                             <tr key = {user.id}>
-                                <td>{user.firstName}</td>
-                                <td>{user.lastName}</td>
-                                <td>{user.contact}</td>
+                                <td className='cell'><img style={this.photoStyle} src={user.dog_photo_url} alt={''}/></td>
+                                <td className='cell'>{user.dogName}</td>
+                                <td className='cell'>{user.firstName+' '+user.lastName}</td>
+                                <td className='cell'>{user.contact}</td>
                             </tr>
                                 ) }
 

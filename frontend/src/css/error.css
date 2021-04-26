@@ -1,0 +1,23 @@
+.error-body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font: normal normal normal 30px/31px Segoe UI;
+    color: white;
+    width: 60%;
+}
+
+.error-banner{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.error-prompt{
+    margin-top: 1em;
+}

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import '../css/Login.css';
-import Logo from "../components/Logo";
+import Logo from "../components/common/Logo";
 import LoginForm from "../components/login/LoginForm";
 import LogoText from "../components/LogoText";
+import MainLogo from "../components/common/MainLogo";
 
 class Login extends Component {
 
@@ -15,7 +16,7 @@ class Login extends Component {
                 <body>
                 <div className="container">
                     <div className="logo">
-                        <Logo/>
+                        <MainLogo/>
                         <LogoText/>
                     </div>
 

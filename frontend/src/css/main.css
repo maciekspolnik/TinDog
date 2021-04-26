@@ -4,10 +4,6 @@ body {
     height: 100vh;
 }
 
-.navig{
-    color:white;
-    font-weight: bold;
-}
 
 header {
     display: flex;
@@ -61,6 +57,9 @@ margin-right: auto;
 display: flex;
 flex-direction: row;
 }
+.cell{
+    vertical-align: middle;
+}
 
 .profile {
 display: flex;
@@ -74,6 +73,8 @@ margin-left: 1em;
 .menu-bar{
     display: flex;
     flex-direction: row;
+    color:white;
+    font-weight: bold;
 }
 
 
@@ -88,8 +89,8 @@ height: 100%;
 display: flex;
 flex-direction: column;
 height: 100vh;
-background: #730000 0 0 no-repeat padding-box;
 }
+
 
 .container {
 width: 100vw;

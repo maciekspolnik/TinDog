@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../../css/main.css';
-import LittleLogo from "../LittleLogo";
-import Picture from "../Picture";
+import LittleLogo from "../common/LittleLogo";
 import {Link} from "react-router-dom";
 
 
@@ -12,7 +11,8 @@ class TopBar extends Component {
         color: "white",
         fontSize: "26px",
         marginTop: "auto",
-        marginBottom: "auto"
+        marginBottom: "auto",
+        marginRight: "1em"
     }
 
     render() {
@@ -20,16 +20,23 @@ class TopBar extends Component {
             <header className="topbar">
                 <div className='menu-bar'>
                     <LittleLogo />
-                <Link className='navig' style={this.style} to="/matched_list">
-                    Twoje kontakty
-                </Link>
-                    </div>
-                <div className="profile">
-                    <Link style={this.style} to="/login">
-                        Imie Nazwisko
+                    <Link style={this.style} to="/">
+                        Strona Główna
                     </Link>
-
-                    <Picture/>
+                    <Link style={this.style} to="/matched_list">
+                        Twoje kontakty
+                    </Link>
+                    <Link style={this.style} to="/settings">
+                        Ustawienia
+                    </Link>
+                    <Link style={this.style} to="/err">
+                        Profil
+                    </Link>
+                    </div>
+                <div className='menu-bar'>
+                    <Link style={this.style} to="/login">
+                        Zaloguj się
+                    </Link>
                 </div>
             </header>
         );

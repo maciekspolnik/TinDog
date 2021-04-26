@@ -121,8 +121,10 @@ input, textarea {
 
 .upload-file {
     font: normal normal normal 30px/31px Segoe UI;
+    font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: white;
+    margin-top:1em;
 
 }
 .upload-file:hover{

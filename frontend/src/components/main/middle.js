@@ -21,9 +21,11 @@ function Middle() {
                 </div>
             )
         }
-    return (<div>
+    return (
+        <div className='middle'>
             error of file
-    </div>)
+        </div>
+    )
 }
 
 export default Middle;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from '../multimedia/logo.png';
 import {Link} from 'react-router-dom'
 
 
@@ -11,7 +10,7 @@ class LittleLogo extends Component {
         return (
             <React.Fragment className="logo">
                 <Link to="/">
-                    <img src={logo} alt="" style={{
+                    <img src={'./logo.png'} alt="" style={{
                         height: "100px",
                         width: "100px",
                         marginRight: "1em"
