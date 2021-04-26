@@ -22,6 +22,9 @@ public class User {
     @Column(name="last_name")
     private String lastName;
 
+    @Column(name="dog_name")
+    private String dogName;
+
     @Column(name="contact")
     private String contact;
 
@@ -38,11 +41,12 @@ public class User {
 
     }
 
-    public User(String email, String password, String firstName, String lastName, String contact, String photo_url, String dog_photo_url, String age) {
+    public User(String email, String password, String firstName, String lastName, String dogName, String contact, String photo_url, String dog_photo_url, String age) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.dogName = dogName;
         this.contact = contact;
         this.photo_url = photo_url;
         this.dog_photo_url = dog_photo_url;
@@ -102,4 +106,8 @@ public class User {
     public String getAge() { return age; }
 
     public void setAge(String age) { this.age = age; }
+
+    public String getDogName() { return dogName; }
+
+    public void setDogName(String dogName) { this.dogName = dogName; }
 }

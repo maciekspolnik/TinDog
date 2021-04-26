@@ -1,43 +1,29 @@
-import React, {Component} from "react";
-import banner from "../../multimedia/img.jpg"
+import React, {useState, useEffect} from "react";
+import UserService from '../../services/UserService'
 
-class Middle extends Component {
+function Middle() {
 
+        const URL = 'http://localhost:8080/users/?index=3'
+        const [user, setUser] = useState(null)
 
-    middle={
-        height: '70vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center'
-    }
-    name_block={
-        backgroundColor: 'rgba(19, 19, 19, 0.9)',
-        width: '30%',
-        height: '15%',
-        borderRadius: '20px',
-        color: 'white',
-        fontSize: '40px',
-        textAlign: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex'
-    }
-    banner = {
-        width: '20%',
-        height: '70%',
-        marginTop: '1em',
-        borderRadius: '20px'
-    }
+        useEffect(()=>{
+            UserService.getUsersByID(3)
+            .then(response =>{
+                setUser(response.data)
+            })
+        },[URL])
 
-    render() {
-        return (
-            <div style={this.middle}>
-                <div style={this.name_block}>Felo</div>
-                <img style={this.banner} src={banner} alt=""/>
-            </div>
-        );
-    }
+        if(user){
+            return (
+                <div className='middle'>
+                    <div className='name_block'>{user.dogName}</div>
+                    <img className='banner' src={user.dog_photo_url} alt={user.dogName}/>
+                </div>
+            )
+        }
+    return (<div>
+            error of file
+    </div>)
 }
 
 export default Middle;

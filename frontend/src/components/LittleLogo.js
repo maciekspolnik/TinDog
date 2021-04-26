@@ -13,8 +13,10 @@ class LittleLogo extends Component {
                 <Link to="/">
                     <img src={logo} alt="" style={{
                         height: "100px",
-                        width: "100px"
-                }}/></Link>
+                        width: "100px",
+                        marginRight: "1em"
+
+                    }}/></Link>
 
             </React.Fragment>
         );

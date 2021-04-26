@@ -9,6 +9,7 @@ import List from "./views/List";
 import Register from './views/Register'
 import Login from './views/Login'
 import Main from './views/Main'
+
 const history = createBrowserHistory();
 
 ReactDOM.render((

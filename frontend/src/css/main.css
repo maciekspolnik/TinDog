@@ -1,21 +1,23 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    border: none;
-}
-
 body {
     margin: 0;
     background: linear-gradient(180deg, #ba0000 0%, #990000 100%) 0 0 no-repeat padding-box;
     height: 100vh;
 }
 
-.topbar {
+.navig{
+    color:white;
+    font-weight: bold;
+}
+
+header {
     display: flex;
     flex-direction: row;
-    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    height:15vh;
+    padding: 1em 2em;
+    border: none;
+    width: 100%;
 }
 
 .bottom {
@@ -47,7 +49,6 @@ body {
     align-items: center;
     justify-content: space-between;
     display: flex;
-
 }
 
 .icon {
@@ -67,7 +68,14 @@ font: normal normal normal 20px/27px Segoe UI;
 color: #c3c3c3;
 align-items: center;
 margin-left: 1em;
+    justify-content: end;
 }
+
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+}
+
 
 .base-container {
 display: flex;
@@ -90,4 +98,31 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+}
+
+.middle{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.name_block{
+    background-color: rgba(19, 19, 19, 0.9);
+    width: 22%;
+    height: 15%;
+    border-radius: 20px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.banner {
+    width: 20%;
+    height: 70%;
+    margin-top: 1em;
+    border-radius: 20px;
 }

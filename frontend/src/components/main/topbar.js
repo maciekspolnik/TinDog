@@ -9,7 +9,7 @@ class TopBar extends Component {
 
     style={
         textDecoration: "none",
-        color: "black",
+        color: "white",
         fontSize: "26px",
         marginTop: "auto",
         marginBottom: "auto"
@@ -18,7 +18,12 @@ class TopBar extends Component {
     render() {
         return (
             <header className="topbar">
-                <LittleLogo/>
+                <div className='menu-bar'>
+                    <LittleLogo />
+                <Link className='navig' style={this.style} to="/matched_list">
+                    Twoje kontakty
+                </Link>
+                    </div>
                 <div className="profile">
                     <Link style={this.style} to="/login">
                         Imie Nazwisko
