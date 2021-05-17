@@ -11,6 +11,7 @@ class ToggleSwitch extends Component {
                     className="toggle-switch-checkbox"
                     name={this.props.Name}
                     id={this.props.Name}
+                    defaultChecked={this.props.checked}
                 />
                 <label className="toggle-switch-label" htmlFor={this.props.Name}>
                     <span className="toggle-switch-inner" />

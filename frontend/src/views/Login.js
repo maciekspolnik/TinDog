@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../css/Login.css';
-import Logo from "../components/common/Logo";
 import LoginForm from "../components/login/LoginForm";
 import LogoText from "../components/LogoText";
 import MainLogo from "../components/common/MainLogo";

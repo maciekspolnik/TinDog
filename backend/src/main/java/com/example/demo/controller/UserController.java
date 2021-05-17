@@ -1,14 +1,11 @@
 package com.example.demo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
 
 import com.example.demo.manager.UserManager;
 import com.example.demo.model.User;
-import com.example.demo.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin(origins="http://localhost:3000")
 @RestController
@@ -31,6 +28,9 @@ public class UserController {
     public Optional<User> getUsersByID(@RequestParam Long index){
         return users.findByID(index);
     }
+
+    @GetMapping("/email")
+    public Optional<User> getUsersByEmail(@RequestParam String email) { return users.findByEmail(email); }
 
     @PostMapping("/")
     public User addUser(@RequestBody User user) {

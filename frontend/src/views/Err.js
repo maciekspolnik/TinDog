@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import '../css/Login.css'
 import '../css/error.css'
 import '../css/main.css'
-import Logo from "../components/common/Logo";
 import MainLogo from "../components/common/MainLogo";
 
 class Err extends Component {

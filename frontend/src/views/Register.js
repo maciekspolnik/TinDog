@@ -8,7 +8,7 @@ class Register extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
 
                 <head>
                     <title>REGISTER</title>
@@ -23,7 +23,7 @@ class Register extends Component {
                     <RegisterForm/>
                 </div>
                 </body>
-            </div>
+            </React.Fragment>
         );
     }
 }

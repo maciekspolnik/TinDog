@@ -20,7 +20,7 @@ public class Settings {
     @Column(name="expiration")
     private Long expiration;
 
-    @Column(name="resetOnLogin")
+    @Column(name="reset_on_login")
     private Long resetOnLogin;
 
     public Settings() {

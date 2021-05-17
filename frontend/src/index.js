@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Err from "./views/Err"
 import List from "./views/List"
-import Test from "./views/Test"
 import Main from './views/Main'
 import Login from './views/Login'
 import Register from './views/Register'
@@ -24,7 +23,6 @@ ReactDOM.render((
             <Route path="/register" component={Register} />
             <Route path="/settings" component={Settings} />
             <Route path="/err" component={Err} />
-            <Route path="/test" component={Test} />
         </Switch>
     </Router>),
     document.getElementById('root')

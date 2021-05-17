@@ -21,13 +21,13 @@ public class UserManager {
         return userRepository.findById(id);
     }
 
+    public Optional<User> findByEmail(String email) { return userRepository.findUserByEmail(email); }
+
     public Iterable<User> findAll(){
         return userRepository.findAll();
     }
 
-    public User save(User user){
-        return userRepository.save(user);
-    }
+    public User save(User user){ return userRepository.save(user); }
 
     public void delete(Long id){
         userRepository.deleteById(id);

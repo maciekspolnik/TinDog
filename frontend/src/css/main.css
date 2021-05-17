@@ -67,7 +67,7 @@ font: normal normal normal 20px/27px Segoe UI;
 color: #c3c3c3;
 align-items: center;
 margin-left: 1em;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .menu-bar{

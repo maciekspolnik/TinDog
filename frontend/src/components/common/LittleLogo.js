@@ -8,7 +8,7 @@ class LittleLogo extends Component {
 
     render() {
         return (
-            <React.Fragment className="logo">
+            <div className="logo">
                 <Link to="/">
                     <img src={'./logo.png'} alt="" style={{
                         height: "100px",
@@ -17,7 +17,7 @@ class LittleLogo extends Component {
 
                     }}/></Link>
 
-            </React.Fragment>
+            </div>
         );
     }
 }
