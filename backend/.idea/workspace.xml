@@ -6,23 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7ed3b5-e393-4321-ba08-3e8511b06b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/MatchesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/MatchesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MatchesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/MatchesManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/MatchesRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/LittleLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/LittleLogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Err.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/Err.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +47,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -71,15 +60,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +117,9 @@
       <workItem from="1620669415429" duration="177000" />
       <workItem from="1620678000357" duration="2804000" />
       <workItem from="1620710885230" duration="1834000" />
+      <workItem from="1621257213292" duration="4017000" />
+      <workItem from="1621269240530" duration="2833000" />
+      <workItem from="1621314860520" duration="677000" />
     </task>
     <servers />
   </component>

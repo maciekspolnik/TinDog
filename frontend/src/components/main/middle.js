@@ -11,6 +11,7 @@ function Middle() {
             .then(response =>{
                 setUser(response.data)
             })
+            console.log(user)
         },[URL])
 
         if(user){
