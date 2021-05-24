@@ -12,18 +12,16 @@ public class Session {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_user")
-    private User id_user;
+    private Users id_user;
 
-    @Column(name="token")
     private String token;
 
-    @Column(name="expiration")
     private String expiration;
 
     public Session() {
     }
 
-    public Session(User id_user, String token, String expiration) {
+    public Session(Users id_user, String token, String expiration) {
         this.id_user = id_user;
         this.token = token;
         this.expiration = expiration;
@@ -33,9 +31,9 @@ public class Session {
 
     public void setId(Long id) { this.id_session = id; }
 
-    public User getId_user() { return id_user; }
+    public Users getId_user() { return id_user; }
 
-    public void setId_user(User id_user) { this.id_user = id_user; }
+    public void setId_user(Users id_user) { this.id_user = id_user; }
 
     public String getToken() { return token; }
 

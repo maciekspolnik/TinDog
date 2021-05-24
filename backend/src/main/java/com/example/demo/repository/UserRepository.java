@@ -1,15 +1,18 @@
 package com.example.demo.repository;
 
-import com.example.demo.model.User;
-import org.springframework.data.repository.CrudRepository;
+import java.util.Optional;
+import com.example.demo.model.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends JpaRepository<Users, Long> {
 
-    Optional<User> findUserByEmail(String email);
+    Optional<Users> findByUsername(String username);
 
-    boolean existsByEmailAndPassword(String email,String password);
+    Optional<Users> findByEmail(String email);
+
+    Boolean existsByUsername(String username);
+
+    Boolean existsByEmail(String email);
 }

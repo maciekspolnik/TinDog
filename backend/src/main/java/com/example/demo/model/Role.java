@@ -3,37 +3,37 @@ package com.example.demo.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="role")
+@Table(name = "role")
 public class Role {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_role;
+    private Integer id;
 
-    @OneToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="id_user")
-    private User idUser;
-
-    @Column(name="role_name")
-    private String roleName;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private ERole name;
 
     public Role() {
+
     }
 
-    public Role(User idUser, String roleName) {
-        this.idUser = idUser;
-        this.roleName = roleName;
+    public Role(ERole name) {
+        this.name = name;
     }
 
-    public Long getId() { return id_role; }
+    public Integer getId() {
+        return id;
+    }
 
-    public void setId(Long id) { this.id_role = id; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-    public Long getIdUser() { return idUser.getId(); }
+    public ERole getName() {
+        return name;
+    }
 
-    public void setIdUser(User idUser) { this.idUser = idUser; }
-
-    public String getRoleName() { return roleName; }
-
-    public void setRoleName(String roleName) { this.roleName = roleName; }
+    public void setName(ERole name) {
+        this.name = name;
+    }
 }

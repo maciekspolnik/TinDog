@@ -12,7 +12,7 @@ public class Matches {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="id_matched_who")
-    private User id_user;
+    private Users id_user;
 
     @Column(name="id_matched_whom")
     private Long id_matched;
@@ -23,7 +23,7 @@ public class Matches {
     public Matches() {
     }
 
-    public Matches(User user, Long id_matched_whom, Long time_to_expire) {
+    public Matches(Users user, Long id_matched_whom, Long time_to_expire) {
         this.id_user = user;
         this.id_matched = id_matched_whom;
         this.time_to_expire = time_to_expire;
@@ -35,7 +35,7 @@ public class Matches {
 
     public Long getIdUser() { return id_user.getId(); }
 
-    public void setIdUser(User id_user) { this.id_user = id_user; }
+    public void setIdUser(Users id_user) { this.id_user = id_user; }
 
     public Long getId_matched() { return id_matched; }
 
