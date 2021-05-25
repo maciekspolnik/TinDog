@@ -12,40 +12,24 @@ body {
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-    text-align: left;
-    font: normal normal normal 45px/56px Square721 BT;
-    letter-spacing: 0;
-    color: #444444;
-}
-
 a {
     text-decoration: none;
     margin-top: 1em;
     justify-content: flex-end;
 }
 
-.logo > img {
-    height: 40vh;
-    margin-bottom: 0;
-    margin-left: 1%;
-}
-
-.logo > div {
-    margin-left: 1em;
-
-    font-size: 30px;
+.banner{
+    margin:auto;
+    font: normal normal normal 30px/27px Segoe UI;
+    text-align: center;
     color: white;
+    font-weight: bold;
 }
 
 .login-container {
     width: 100%;
+    display:flex;
+    flex-direction: column;
 
 }
 
@@ -54,12 +38,12 @@ form.login {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 60%;
     height: 60vh;
-    background: #2B2D426D 0 0 no-repeat padding-box;
+    background: rgba(255, 255, 255, 0.51) 0 0 no-repeat padding-box;
     box-shadow: 0 5px 6px #00000029;
     border-radius: 40px;
-    margin-bottom: 1em;
+    margin: 2em auto 1em;
 }
 
 form.register {
@@ -67,55 +51,65 @@ form.register {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 75vh;
-    background: #2B2D426D 0 0 no-repeat padding-box;
+    width: 60%;
+    height: 60vh;
+    background: rgba(255, 255, 255, 0.51) 0 0 no-repeat padding-box;
     box-shadow: 0 5px 6px #00000029;
-    border-radius: 74px;
+    border-radius: 40px;
+    margin: 2em auto 1em;
 }
 
 .login > div {
+    display:flex;
+    width: 100%;
     font: normal normal normal 20px/27px Segoe UI;
-    font-size: 30px;
+    font-size: 15px;
 }
 
-.Register > div {
+.register > div {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
     font: normal normal normal 20px/27px Segoe UI;
-    font-size: 30px;
+    font-size: 15px;
 }
 
-button {
-    margin-bottom: 1em;
-}
-
-
-button {
-    background: rgba(250, 213, 213, 0.83) 0 0 no-repeat padding-box;
+.my_button {
+    display:flex;
+    background: linear-gradient(180deg, #ba0000 0%, #ab0000 100%) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
-    width: 90%;
-    height: 5vh;
+    width: 80%;
+    height: 6vh;
     border: none;
-    color: #212121;
-    margin-top: 1em;
+    color: white;
+    font-weight: bold;
     font-size: 20px;
     justify-content: center;
     text-align: center;
     border-radius: 20px;
+    margin: 1em auto;
 }
 
 .login-banner {
+    font: normal normal normal 20px/27px Segoe UI;
+    display:flex;
     margin-bottom: 1em;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-input, textarea {
-    width: 90%;
-    height: 4vh;
+.inputs {
+    display: flex;
+    width: 80%;
+    height: 10vh;
     background: #F0F0F0 0 0 no-repeat padding-box;
-    box-shadow: 0 3px 6px #00000029;
     border: none;
     border-radius: 20px;
     padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
 }
 

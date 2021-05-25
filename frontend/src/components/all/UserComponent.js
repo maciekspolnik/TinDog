@@ -1,5 +1,5 @@
 import React from 'react';
-import UserService from "../services/UserService";
+import axios from "axios";
 
 
 class UserComponent extends React.Component {
@@ -24,7 +24,7 @@ class UserComponent extends React.Component {
     }
 
     componentDidMount() {
-        UserService.getUsers()
+        axios.get('http://localhost:8080/users/all')
             .then((response)=>{this.setState({users: response.data})})
     }
     render(){

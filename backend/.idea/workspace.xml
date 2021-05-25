@@ -5,43 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7ed3b5-e393-4321-ba08-3e8511b06b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/jwt/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/ERole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/payloads/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/payloads/request/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/payloads/response/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/payloads/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/CorsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SecurityController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SettingsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/SecurityManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/SettingsManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/manager/UserManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Matches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Matches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Settings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LogsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/LogsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/SessionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/SettingsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/SettingsToggles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/error.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/settings.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/UserService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Settings.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,17 +73,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
@@ -159,7 +127,8 @@
       <workItem from="1621788206064" duration="655000" />
       <workItem from="1621788971180" duration="1749000" />
       <workItem from="1621790890373" duration="5830000" />
-      <workItem from="1621845790790" duration="2272000" />
+      <workItem from="1621845790790" duration="3045000" />
+      <workItem from="1621869744302" duration="4325000" />
     </task>
     <servers />
   </component>

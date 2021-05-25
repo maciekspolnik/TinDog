@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import UserService from '../../services/UserService'
+import axios from "axios";
 
 function Middle() {
 
@@ -7,7 +7,7 @@ function Middle() {
         const [user, setUser] = useState(null)
 
         useEffect(()=>{
-            UserService.getUsersByID(3)
+            axios.get(URL)
             .then(response =>{
                 setUser(response.data)
             })
