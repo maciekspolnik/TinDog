@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-function Middle() {
+const Middle () => {
+    const [user, setUser] = useState(null)
+
+};
 
         const URL = 'http://localhost:8080/users/?index=3'
-        const [user, setUser] = useState(null)
+
 
         useEffect(()=>{
             axios.get(URL)

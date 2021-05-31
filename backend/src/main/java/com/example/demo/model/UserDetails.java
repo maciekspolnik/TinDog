@@ -1,15 +1,20 @@
 package com.example.demo.model;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name= "user_data")
-public class UserData {
+public class UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_details;
 
-    @OneToOne(mappedBy = "userDetails")
+    @JsonManagedReference
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userDetails")
     private Users users;
 
     private String dog_name;
@@ -17,15 +22,15 @@ public class UserData {
     private String owner;
     private String contact;
 
-    public UserData() {
+    public UserDetails() {
     }
 
     public Long getId() {
-        return id;
+        return id_details;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.id_details = id;
     }
 
     public Users getUsers() {
@@ -68,11 +73,14 @@ public class UserData {
         this.contact = contact;
     }
 
-    public UserData(Users users, String dog_name, String img_url, String owner, String contact) {
-        this.users = users;
+    public UserDetails(String dog_name, String img_url, String owner, String contact) {
         this.dog_name = dog_name;
         this.img_url = img_url;
         this.owner = owner;
         this.contact = contact;
     }
+    public void SetConnect(){
+        this.users.setUserDetails(this);
+    }
+
 }

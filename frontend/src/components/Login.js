@@ -22,22 +22,22 @@ const required = (value) => {
 };
 
 const Login = (props) => {
-  const form = useRef();
-  const checkBtn = useRef();
+    const form = useRef();
+    const checkBtn = useRef();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
-  const { isLoggedIn } = useSelector(state => state.auth);
-  const { message } = useSelector(state => state.message);
+    const { isLoggedIn } = useSelector(state => state.auth);
+    const { message } = useSelector(state => state.message);
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  const onChangeUsername = (e) => {
-    const username = e.target.value;
-    setUsername(username);
-  };
+    const onChangeUsername = (e) => {
+        const username = e.target.value;
+        setUsername(username);
+    };
 
   const onChangePassword = (e) => {
     const password = e.target.value;
@@ -97,9 +97,6 @@ const Login = (props) => {
             />
 
             <button className="my_button" disabled={loading}>
-              {loading && (
-                <span className="spinner-border spinner-border-sm"></span>
-              )}
               <span>Login</span>
             </button>
 

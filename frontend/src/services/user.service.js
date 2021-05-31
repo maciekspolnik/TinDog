@@ -11,7 +11,7 @@ const getUserBoard = () => {
   return axios.get(API_URL + "user", { headers: authHeader() });
 };
 
-const getModeratorBoard = () => {
+const getUsersMatched = () => {
   return axios.get(API_URL + "mod", { headers: authHeader() });
 };
 
@@ -22,6 +22,5 @@ const getAdminBoard = () => {
 export default {
   getPublicContent,
   getUserBoard,
-  getModeratorBoard,
   getAdminBoard,
 };

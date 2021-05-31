@@ -1,11 +1,12 @@
 package com.example.demo.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(	name = "users",
@@ -18,28 +19,36 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    @Size(max = 20)
+    @Column(name="username")
     private String username;
 
-    @NotBlank
-    @Size(max = 50)
     @Email
+    @Column(name="email")
     private String email;
 
-    @NotBlank
-    @Size(max = 120)
+    @Column(name="password")
     private String password;
 
-    @OneToOne
-    @JoinColumn(name = "details_id")
-    private UserData userDetails;
+    @JsonBackReference
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_details")
+    private UserDetails userDetails;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+
+
+    public UserDetails getUserDetails() {
+        return userDetails;
+    }
+
+    public void setUserDetails(UserDetails userDetails) {
+        this.userDetails = userDetails;
+    }
 
     public Users() {
     }
@@ -48,6 +57,17 @@ public class Users {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.userDetails = new UserDetails();
+        this.userDetails.setUsers(this);
+    }
+
+    public Users(Users users){
+        this.id = users.getId();
+        this.username = users.getUsername();
+        this.email = users.getEmail();
+        this.password = users.getPassword();
+        this.roles = users.getRoles();
+        this.userDetails = users.getUserDetails();
     }
 
     public Long getId() {

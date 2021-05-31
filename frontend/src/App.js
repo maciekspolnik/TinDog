@@ -9,9 +9,8 @@ import "./css/main.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
-import Profile from "./components/Profile";
+import Main from "./components/Main"
 import BoardUser from "./components/BoardUser";
-import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
 import { logout } from "./actions/auth";
@@ -19,9 +18,10 @@ import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
 import LittleLogo from "./components/all/common/LittleLogo";
+import Profile from "./components/Profile";
 
 const App = () => {
-  const [showModeratorBoard, setShowModeratorBoard] = useState(false);
+
   const [showAdminBoard, setShowAdminBoard] = useState(false);
 
   const { user: currentUser } = useSelector((state) => state.auth);
@@ -44,7 +44,6 @@ const App = () => {
 
   useEffect(() => {
     if (currentUser) {
-      setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
       setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
     }
   }, [currentUser]);
@@ -68,7 +67,7 @@ const App = () => {
                 </Link>
             )}
             {currentUser && (
-                  <Link to={"/user"} style={style}>
+                  <Link to={"/main"} style={style}>
                     Poznaj
                   </Link>
             )}
@@ -112,9 +111,9 @@ const App = () => {
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/profile" component ={Profile}/>
             <Route path="/user" component={BoardUser} />
-            <Route path="/mod" component={BoardModerator} />
+            <Route path="/main" component={Main} />
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
         </div>

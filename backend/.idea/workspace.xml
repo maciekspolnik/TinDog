@@ -5,22 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7ed3b5-e393-4321-ba08-3e8511b06b4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../frontend/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/UserComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/SettingsToggles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/common/toggle/ToggleSwitch.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/main/middle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/settings.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/services/UserService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/UserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/UserDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/main/bottom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/main/middle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/middle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Main.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +136,11 @@
       <workItem from="1621790890373" duration="5830000" />
       <workItem from="1621845790790" duration="3045000" />
       <workItem from="1621869744302" duration="4325000" />
+      <workItem from="1621920348718" duration="3353000" />
+      <workItem from="1622198518949" duration="1532000" />
+      <workItem from="1622225746698" duration="22043000" />
+      <workItem from="1622317774051" duration="898000" />
+      <workItem from="1622381935737" duration="1375000" />
     </task>
     <servers />
   </component>
