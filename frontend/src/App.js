@@ -8,17 +8,17 @@ import "./css/main.css";
 
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Home from "./components/Home";
 import Main from "./components/Main"
-import BoardUser from "./components/BoardUser";
 import BoardAdmin from "./components/BoardAdmin";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
-import LittleLogo from "./components/all/common/LittleLogo";
+import LittleLogo from "./components/all/LittleLogo";
 import Profile from "./components/Profile";
+import List from "./components/List";
+import Test from "./components/Test";
 
 const App = () => {
 
@@ -108,13 +108,13 @@ const App = () => {
 
         <div>
           <Switch>
-            <Route exact path={["/", "/home"]} component={Home} />
+            <Route exact path={["/", "/main"]} component={Main} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component ={Profile}/>
-            <Route path="/user" component={BoardUser} />
-            <Route path="/main" component={Main} />
             <Route path="/admin" component={BoardAdmin} />
+            <Route path="/matched_list" component={List} />
+            <Route path="/test" component={Test}/>
           </Switch>
         </div>
       </div>

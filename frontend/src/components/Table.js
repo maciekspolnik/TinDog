@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from "axios";
+import {getAllUserDetails} from "../services/user.service";
 
 
-class UserComponent extends React.Component {
+class Table extends React.Component {
 
     tableStyles={
         color:'white',
@@ -24,8 +24,9 @@ class UserComponent extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/users/all')
+            getAllUserDetails()
             .then((response)=>{this.setState({users: response.data})})
+        console.log(this.state.users)
     }
     render(){
         return (
@@ -42,9 +43,9 @@ class UserComponent extends React.Component {
                     <tbody style ={{textAlign:'center', fontSize:"20px"}}>
                     {this.state.users.map(user=>
                             <tr key = {user.id}>
-                                <td className='cell'><img style={this.photoStyle} src={user.dog_photo_url} alt={''}/></td>
-                                <td className='cell'>{user.dogName}</td>
-                                <td className='cell'>{user.firstName+' '+user.lastName}</td>
+                                <td className='cell'><img style={this.photoStyle} src={user.img_url} alt={''}/></td>
+                                <td className='cell'>{user.dog_name}</td>
+                                <td className='cell'>{user.owner}</td>
                                 <td className='cell'>{user.contact}</td>
                             </tr>
                                 ) }
@@ -58,4 +59,4 @@ class UserComponent extends React.Component {
 
 
 }
-export default UserComponent;
+export default Table;

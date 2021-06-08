@@ -1,24 +1,52 @@
-import React, {Component} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../css/Login.css';
 import '../css/main.css'
-import Middle from "./middle";
+import {getUserDetailsById} from "../services/user.service";
 
-class Main extends Component {
+const Main = () => {
 
-    render() {
+
+    let number = 1;
+    const [content, setContent] = useState("");
+
+    useEffect(() => {
+        getUserDetailsById(1).then(
+            (response) => {
+                console.log(response.data);
+                setContent(response.data);
+            },
+            (error) => {
+                const _content =
+                    (error.response &&
+                        error.response.data &&
+                        error.response.data.message) ||
+                    error.message ||
+                    error.toString();
+
+                setContent(_content);
+            }
+        );
+    }, []);
+
+    const handlePlus = () =>{
+        console.log("plus")
+    }
+    const handleMinus = () =>{
+        console.log("minus")
+    }
+
         return (
             <React.Fragment>
-                <head>
-                    <title>MAIN PAGE</title>
-                </head>
                 <body>
                 <div className="main-container">
-                    <Middle/>
+                    <div className='middle'>
+                        <div className='name_block'>{content.dog_name}</div>
+                        <img className='banner' src={content.img_url} alt={content.dog_name}/>
+                    </div>
                     <div className="bottom">
                         <div className="swipe_block">
-                            <div className="swipe_click"><img className="icon" alt="" src={"./icons/plus.png"}/></div>
-                            <div className="swipe_click"><img className="icon" alt="" src={"./icons/bone.png"}/></div>
-                            <div className="swipe_click"><img className="icon" alt="" src={"./icons/minus.png"}/></div>
+                            <button onClick={handlePlus} className="swipe_click" style={{marginLeft: "1em"}}><img className="icon" alt="" src={"./icons/plus.png"}/></button>
+                            <button onClick={handleMinus} className="swipe_click" style={{marginRight: "1em"}}><img className="icon" alt="" src={"./icons/minus.png"}/></button>
 
                         </div>
                     </div>
@@ -26,7 +54,7 @@ class Main extends Component {
                 </body>
             </React.Fragment>
         );
-    }
+
 }
 
 export default Main;

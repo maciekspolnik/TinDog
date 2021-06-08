@@ -1,13 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../css/Login.css';
 import '../css/main.css'
-import TopBar from "../components/main/topbar";
-import UserComponent from "../components/UserComponent";
-import BotBar from "../components/BotBar";
+import Table from "./Table";
 
-class List extends Component {
+const List = () =>{
 
-    bannerStyle={
+    const bannerStyle={
         color:'white',
         width:'80%',
         font:"Segoe UI",
@@ -17,7 +15,6 @@ class List extends Component {
         marginTop: "5vh"
     }
 
-    render() {
         return (
             <React.Fragment>
                 <head>
@@ -25,15 +22,14 @@ class List extends Component {
                 </head>
                 <body>
                 <div className="main-container" style={{height:"100vh"}}>
-                    <TopBar/>
-                    <div style={this.bannerStyle}>Oto twoja lista towarzyszy spacerowych</div>
-                    <UserComponent/>
-                    <BotBar/>
+
+                    <div style={bannerStyle}>Oto twoja lista towarzyszy spacerowych</div>
+                    <Table/>
+
                 </div>
                 </body>
             </React.Fragment>
         );
-    }
 }
 
 export default List;

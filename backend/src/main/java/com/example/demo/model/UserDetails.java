@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -14,8 +16,8 @@ public class UserDetails {
     private Long id_details;
 
     @JsonManagedReference
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userDetails")
-    private Users users;
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "userDetails", cascade=CascadeType.ALL)
+    private Users user;
 
     private String dog_name;
     private String img_url;
@@ -33,12 +35,12 @@ public class UserDetails {
         this.id_details = id;
     }
 
-    public Users getUsers() {
-        return users;
+    public Users getUser() {
+        return user;
     }
 
-    public void setUsers(Users users) {
-        this.users = users;
+    public void setUser(Users users) {
+        this.user = users;
     }
 
     public String getDog_name() {
@@ -78,9 +80,6 @@ public class UserDetails {
         this.img_url = img_url;
         this.owner = owner;
         this.contact = contact;
-    }
-    public void SetConnect(){
-        this.users.setUserDetails(this);
     }
 
 }

@@ -30,7 +30,7 @@ public class Users {
     private String password;
 
     @JsonBackReference
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "id_details")
     private UserDetails userDetails;
 
@@ -39,8 +39,6 @@ public class Users {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
-
-
 
     public UserDetails getUserDetails() {
         return userDetails;
@@ -58,7 +56,7 @@ public class Users {
         this.email = email;
         this.password = password;
         this.userDetails = new UserDetails();
-        this.userDetails.setUsers(this);
+        this.userDetails.setUser(this);
     }
 
     public Users(Users users){

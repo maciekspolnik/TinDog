@@ -1,6 +1,4 @@
 import React, { useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -9,8 +7,8 @@ import CheckButton from "react-validation/build/button";
 import "./../css/Login.css"
 import "./../css/main.css"
 
-import { login } from "../actions/auth";
-import Button from "./all/Button";
+import {postUserDetails} from "../services/user.service"
+import {useSelector} from "react-redux";
 
 const required = (value) => {
   if (!value) {
@@ -30,11 +28,11 @@ const Profile = (props) => {
     const [owner, setOwner] = useState("");
     const [dogPhoto, setDogPhoto] = useState("");
     const [contact, setContact] = useState("");
+    const [loading, setLoading] = useState(false);
 
-//    const { isLoggedIn } = useSelector(state => state.auth);
+    const { user: currentUser } = useSelector((state) => state.auth);
     const { message } = useSelector(state => state.message);
 
-    const dispatch = useDispatch();
 
     const onChangeDogName = (e) => {
         const dogName = e.target.value;
@@ -56,12 +54,25 @@ const Profile = (props) => {
         setContact(contact);
     };
 
-  const handleLogin = (e) => {
-        console.log(dogName)
-        console.log(owner)
-        console.log(dogPhoto)
-        console.log(contact)
-  };
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+
+        if (checkBtn.current.context._errors.length === 0) {
+            postUserDetails(currentUser.id, dogName, owner, dogPhoto, contact)
+                .then(() => {
+                    props.history.push("/profile");
+                    window.location.reload();
+                })
+                .catch(() => {
+                    setLoading(false);
+                });
+        } else {
+            setLoading(false);
+        }
+    };
+
 
     return (
    <div className="login-container">
@@ -111,8 +122,8 @@ const Profile = (props) => {
               validations={[required]}
             />
 
-            <button className="my_button">
-              <span>Login</span>
+            <button style={{display: "initial"}} className="my_button">
+              Submit
             </button>
 
           {message && (
@@ -122,7 +133,7 @@ const Profile = (props) => {
               </div>
             </div>
           )}
-          <Button style={{ display: "none" }} type="submit" />
+            <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
       </div>
   );
