@@ -35,8 +35,7 @@ public class MatchesController {
 
     @DeleteMapping("/delete")
     @Transactional
-    public void deleteMatchesById(
-            @RequestParam Long id){
+    public void deleteMatchesById(@RequestParam Long id){
         matchesRepository.deleteMatchesByIdMatching(id);
     }
 

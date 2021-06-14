@@ -6,6 +6,7 @@ import CheckButton from "react-validation/build/button";
 
 import {postUserDetails} from "../services/user.service"
 import {useSelector} from "react-redux";
+import {Redirect} from "react-router-dom";
 
 const required = (value) => {
   if (!value) {
@@ -21,17 +22,17 @@ const Profile = (props) => {
     const form = useRef();
     const checkBtn = useRef();
 
+    let zmienna;
     const [dogName, setDogName] = useState("");
     const [owner, setOwner] = useState("");
-    const [dogPhoto, setDogPhoto] = useState("");
     const [contact, setContact] = useState("");
     const [loading, setLoading] = useState(false);
 
     const { user: currentUser } = useSelector((state) => state.auth);
     const { message } = useSelector(state => state.message);
 
-    const state = {
-        selectedFile: null
+    if(!currentUser){
+        return <Redirect to="/login"/>;
     }
 
     const onChangeDogName = (e) => {
@@ -45,7 +46,7 @@ const Profile = (props) => {
     };
 
     const onChangeDogPhoto = (e) => {
-        state.selectedFile = e.target.files[0]
+        zmienna = e.target.files[0].name
     };
 
     const onChangeContact = (e) => {
@@ -62,7 +63,7 @@ const Profile = (props) => {
                 currentUser.id,
                 dogName,
                 owner,
-                "./img/"+state.selectedFile.name,
+                "./img/"+zmienna,
                 contact)
                 .then(() => {
                     props.history.push("/profile");
@@ -108,7 +109,6 @@ const Profile = (props) => {
               className="inputs"
               name="dog_photo"
               placeholder="Zdjęcie Psa"
-              value={dogPhoto}
               onChange={onChangeDogPhoto}
 
             />
@@ -125,7 +125,7 @@ const Profile = (props) => {
               validations={[required]}
             />
 
-            <button style={{display: "initial"}} className="my_button">
+            <button disabled={loading} style={{display: "initial"}} className="my_button">
               Submit
             </button>
 

@@ -1,17 +1,18 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {createNewMatch, getUserDetailsById, postUserDetails} from "../services/user.service";
+import React, {useEffect, useState} from 'react';
+import {createNewMatch, getUserDetailsById} from "../services/user.service";
 import {useSelector} from "react-redux";
+import {Redirect} from "react-router-dom";
 
 const Main = (props) => {
 
 
     const [content, setContent] = useState("");
     let number = Number(localStorage.getItem("number"))
-    let default_data = {dog_name:"Upsik", img_url:"./img/azor.jpg", owner:"XD", contact:"none"};
+    //let default_data = {dog_name:"Upsik", img_url:"./img/azor.jpg", owner:"XD", contact:"none"};
     const { user: currentUser } = useSelector((state) => state.auth);
     const [loading, setLoading] = useState(false);
-    const checkBtn = useRef();
     let middle;
+
 
     useEffect(() => {
         getUserDetailsById(number).then(
@@ -30,6 +31,10 @@ const Main = (props) => {
             }
         );
     }, ["http://localhost:8080/api/test/idetails?index="+number]);
+
+    if(!currentUser){
+        return <Redirect to="/login"/>;
+    }
 
     const handlePlus = (e) => {
         e.preventDefault();

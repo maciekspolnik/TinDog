@@ -14,7 +14,7 @@ import java.util.*;
 
 @CrossOrigin(origins="*")
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api/")
 public class UserController {
 
     @Autowired
@@ -40,11 +40,6 @@ public class UserController {
     public Optional<Users> getUsersByID(@RequestParam Long index){
         return userRepository.findById(index);
     }
-
-    @GetMapping("/users/email")
-    @PreAuthorize("hasRole('USER')")
-    public Optional<Users> getUsersByEmail(@RequestParam String email) {
-        return userRepository.findByEmail(email); }
 
     @PostMapping("/")
     @PreAuthorize("hasRole('USER')")
@@ -103,7 +98,7 @@ public class UserController {
 
     @PutMapping
     public Users updateUser(@RequestBody Users user) {
-        return  userRepository.save(user);
+        return userRepository.save(user);
     }
 
     @DeleteMapping

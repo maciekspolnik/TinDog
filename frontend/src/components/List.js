@@ -1,10 +1,16 @@
 import React from 'react';
 import Table from "./Table";
 import {useSelector} from "react-redux";
+import {Redirect} from "react-router-dom";
 
 const List = () =>{
 
     const { user: currentUser } = useSelector((state) => state.auth);
+
+    if(!currentUser){
+        return <Redirect to="/login"/>;
+    }
+
     const bannerStyle={
         color:'white',
         width:'80%',

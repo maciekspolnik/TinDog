@@ -6,40 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7ed3b5-e393-4321-ba08-3e8511b06b4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MatchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/MatchesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/BoardAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/BoardAdmin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/BoardUser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/LittleLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/LogoText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/all/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/css/settings.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/user.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Err.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/Register.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +142,8 @@
       <workItem from="1623317732838" duration="15860000" />
       <workItem from="1623599887604" duration="1308000" />
       <workItem from="1623679515659" duration="204000" />
-      <workItem from="1623679874711" duration="703000" />
+      <workItem from="1623679874711" duration="2145000" />
+      <workItem from="1623704949761" duration="1753000" />
     </task>
     <servers />
   </component>
