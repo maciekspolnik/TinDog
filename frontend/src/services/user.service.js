@@ -3,37 +3,28 @@ import authHeader from "./auth-header";
 const API_URL = "http://localhost:8080/api/test/";
 
 
-
-
-export const getUserBoard = () => {
-  return axios.get(API_URL + "user",
-      { headers: authHeader() });
-};
-
 export const getUserDetailsById = (id) => {
-  return axios.get("http://localhost:8080/api/test/idetails?index=1",
-      { headers: authHeader() });
-};
-
-export const getAdminBoard = () => {
-  return axios.get(API_URL + "admin",
+  return axios.get(
+      "http://localhost:8080/api/test/idetails?index="+id,
       { headers: authHeader() });
 };
 
 export const postUserDetails = (id, dog_name, owner, img_url, contact) => {
-    return axios.post(API_URL+"details?index="+id, {
-        dog_name,
-        img_url,
-        owner,
-        contact
-      },
+    return axios.post(
+        API_URL+"details?index="+id,
+        {
+            dog_name,
+            img_url,
+            owner,
+            contact
+        },
         {headers: authHeader()})
 };
 
-export const getAllUserDetails = () => {
-    return axios.get('http://localhost:8080/api/test/details/all',
+export const getList = (id) => {
+    return axios.get("http://localhost:8080/api/test/list?index="+id,
         {headers: authHeader()})
-};
+}
 
 export const createNewMatch = (idMatching, idMatched) => {
     return axios.post('http://localhost:8080/api/matches/add',
@@ -49,10 +40,10 @@ export const deleteMatches = (id) => {
         {headers: authHeader()})
 }
 
-export default {
+export default{
     getUserDetailsById,
-    getUserBoard,
-    getAdminBoard,
+    getList,
     postUserDetails,
-    getAllUserDetails
-};
+    deleteMatches,
+    createNewMatch
+}

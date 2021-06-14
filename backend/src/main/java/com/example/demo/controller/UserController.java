@@ -1,15 +1,16 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.UserDetails;
+import com.example.demo.model.*;
+import com.example.demo.repository.MatchesRepository;
+import com.example.demo.repository.RoleRepository;
 import com.example.demo.repository.UserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.repository.UserRepository;
-import com.example.demo.model.Users;
 
-import java.util.Optional;
+import java.util.*;
 
 @CrossOrigin(origins="*")
 @RestController
@@ -21,6 +22,12 @@ public class UserController {
 
     @Autowired
     private UserDataRepository userDataRepository;
+
+    @Autowired
+    private MatchesRepository matchesRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     @GetMapping("/users/all")
     @PreAuthorize("hasRole('USER')")
@@ -50,13 +57,36 @@ public class UserController {
     public Users addDetails(@RequestParam Long index, @RequestBody UserDetails details) {
         Users temp = new Users(userRepository.findById((index)).get());
         UserDetails temp2 = new UserDetails();
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleRepository.findByName(ERole.ROLE_USER).get());
+        temp.setRoles(roles);
+        temp2.setId(details.getId());
         temp2.setOwner(details.getOwner());
         temp2.setDog_name(details.getDog_name());
         temp2.setContact(details.getContact());
         temp2.setImg_url(details.getImg_url());
+        userDataRepository.deleteById(temp.getUserDetails().getId());
         temp2.setUser(temp);
         temp.setUserDetails(temp2);
         return userRepository.save(temp);
+    }
+
+    @GetMapping("/list")
+    @PreAuthorize("hasRole('USER')")
+    public Iterable<UserDetails> getListOfMatched(@RequestParam Long index){
+        Iterable<Matches> data = matchesRepository.findMatchesByIdMatching(index);
+        Set<Long> list = new HashSet<>();
+        System.out.println(list);
+        for(Matches o :data){
+            list.add(o.getIdMatched());
+        }
+        Set<UserDetails> users = new HashSet<>();
+        for(Long iter: list){
+            users.add(userDataRepository.findUserDetailsByUserId(iter).get());
+        }
+        System.out.println(users);
+        return users;
+
     }
 
     @GetMapping("/idetails")

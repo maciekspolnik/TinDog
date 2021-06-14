@@ -6,16 +6,13 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 
-import "./../css/main.css"
-import "./../css/Login.css"
-
 import { register } from "../actions/auth";
 
 const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+        To pole jest wymagane.
       </div>
     );
   }
@@ -25,7 +22,7 @@ const validEmail = (value) => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
-        This is not a valid email.
+        Ten mail nie jest poprawny
       </div>
     );
   }
@@ -35,17 +32,17 @@ const vusername = (value) => {
   if (value.length < 3 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
+        Nazwa użytkownika musi mieć między 3 a 20 znaków.
       </div>
     );
   }
 };
 
 const vpassword = (value) => {
-  if (value.length < 6 || value.length > 40) {
+  if (value.length < 6 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The password must be between 6 and 40 characters.
+        Hasło musi zawierać między 6 a 20 znaków.
       </div>
     );
   }
@@ -140,12 +137,16 @@ const Register = () => {
 
           {message && (
             <div className="form-group">
-              <div className={ successful ? "alert alert-success" : "alert alert-danger" } role="alert">
+              <div
+                  className={ successful ? "alert alert-success" : "alert alert-danger" }
+                  role="alert">
                 {message}
               </div>
             </div>
           )}
-          <CheckButton style={{ display: "none" }} ref={checkBtn} />
+          <CheckButton
+              style={{ display: "none" }}
+              ref={checkBtn} />
         </Form>
       </div>
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import '../css/Login.css';
-import '../css/main.css'
 import Table from "./Table";
+import {useSelector} from "react-redux";
 
 const List = () =>{
 
+    const { user: currentUser } = useSelector((state) => state.auth);
     const bannerStyle={
         color:'white',
         width:'80%',
@@ -17,14 +17,11 @@ const List = () =>{
 
         return (
             <React.Fragment>
-                <head>
-                    <title>ALL USERS</title>
-                </head>
                 <body>
-                <div className="main-container" style={{height:"100vh"}}>
+                <div className="main-container">
 
                     <div style={bannerStyle}>Oto twoja lista towarzyszy spacerowych</div>
-                    <Table/>
+                    <Table dataAboutId = {currentUser.id}/>
 
                 </div>
                 </body>

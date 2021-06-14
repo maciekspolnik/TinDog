@@ -9,36 +9,26 @@ import "./css/main.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Main from "./components/Main"
-import BoardAdmin from "./components/BoardAdmin";
+import Admin from "./components/Admin";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
-import LittleLogo from "./components/all/LittleLogo";
+import Logo from "./components/Logo";
 import Profile from "./components/Profile";
 import List from "./components/List";
-import Test from "./components/Test";
+import {deleteMatches} from "./services/user.service";
 
 const App = () => {
 
   const [showAdminBoard, setShowAdminBoard] = useState(false);
-
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
-  const style={
-    textDecoration: "none",
-    color: "white",
-    fontSize: "20px",
-    marginTop: "auto",
-    marginBottom: "auto",
-    marginRight: "1em"
-  }
-
   useEffect(() => {
     history.listen((location) => {
-      dispatch(clearMessage()); // clear message when changing location
+      dispatch(clearMessage());
     });
   }, [dispatch]);
 
@@ -49,31 +39,37 @@ const App = () => {
   }, [currentUser]);
 
   const logOut = () => {
+    deleteMatches(currentUser.id).then(
+        ()=>{
+          localStorage.removeItem("number")
+        }
+    )
     dispatch(logout());
+
   };
 
   return (
     <Router history={history}>
 
 
-      <div>
+      <React.Fragment>
 
-        <header className="topbar">
+        <header>
           <div className='menu-bar'>
-            <LittleLogo />
+            <Logo />
             {currentUser && (
-                <Link style={style} to="/matched_list">
+                <Link className='astyle' to="/matched_list">
                   Twoje kontakty
                 </Link>
             )}
             {currentUser && (
-                  <Link to={"/main"} style={style}>
+                  <Link to={"/main"} className='astyle'>
                     Poznaj
                   </Link>
             )}
             {showAdminBoard && (
 
-                  <Link to={"/admin"} style={style}>
+                  <Link to={"/admin"} className='astyle'>
                     Administrowanie
                   </Link>
 
@@ -82,21 +78,21 @@ const App = () => {
           <div className='menu-bar'>
             {currentUser ? (
                 <div className="my_navbar ml-auto">
-                    <Link to={"/profile"} style={style}>
+                    <Link to={"/profile"} className='astyle'>
                       {currentUser.username}
                     </Link>
-                    <a href="/login" style={style} onClick={logOut}>
+                    <a className='astyle' href="/login" onClick={logOut}>
                       Wyloguj
                     </a>
                 </div>
             ) : (
                 <div className="menu-bar">
 
-                    <Link to={"/login"} style={style}>
+                    <Link to={"/login"} className='astyle'>
                       Logowanie
                     </Link>
 
-                    <Link to={"/register"} style={style}>
+                    <Link to={"/register"} className='astyle'>
                       Rejestracja
                     </Link>
 
@@ -105,19 +101,18 @@ const App = () => {
           </div>
         </header>
 
-
-        <div>
+        <body>
           <Switch>
             <Route exact path={["/", "/main"]} component={Main} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component ={Profile}/>
-            <Route path="/admin" component={BoardAdmin} />
+            <Route path="/admin" component={Admin} />
             <Route path="/matched_list" component={List} />
-            <Route path="/test" component={Test}/>
           </Switch>
-        </div>
-      </div>
+        </body>
+      </React.Fragment>
+
     </Router>
   );
 };

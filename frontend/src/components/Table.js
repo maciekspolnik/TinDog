@@ -1,5 +1,7 @@
 import React from 'react';
-import {getAllUserDetails} from "../services/user.service";
+import {getList} from "../services/user.service";
+
+
 
 
 class Table extends React.Component {
@@ -20,33 +22,75 @@ class Table extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {users:[]}
+        this.state = {
+            users:[],
+            currentUser: this.props.dataAboutId
+        }
+        console.log(this.state.currentUser);
     }
 
+
+
     componentDidMount() {
-            getAllUserDetails()
+            getList(this.state.currentUser)
             .then((response)=>{this.setState({users: response.data})})
-        console.log(this.state.users)
     }
     render(){
         return (
             <React.Fragment>
-                <table className={"table table-stripped"} style={this.tableStyles}>
-                    <thead style={{fontWeight:"bold",fontSize:"20px",textAlign:'center'}}>
+                <table
+                    className={"table table-stripped"}
+                    style={this.tableStyles}>
+                    <thead
+                        style={{
+                            fontWeight:"bold",
+                            fontSize:"20px",
+                            textAlign:'center'}}>
                         <tr>
-                            <td className='cell'>Zdjęcie</td>
-                            <td style={{verticalAlign:'middle'}}>Imię Psa</td>
-                            <td className='cell'>Imię i Nazwisko</td>
-                            <td className='cell'>Kontakt</td>
+                            <td
+                                className='cell'>
+                                Zdjęcie
+                            </td>
+                            <td
+                                style={{verticalAlign:'middle'}}>
+                                Imię Psa
+                            </td>
+                            <td
+                                className='cell'>
+                                Imię i Nazwisko
+                            </td>
+                            <td
+                                className='cell'>
+                                Kontakt
+                            </td>
                         </tr>
                     </thead>
-                    <tbody style ={{textAlign:'center', fontSize:"20px"}}>
-                    {this.state.users.map(user=>
+                    <tbody
+                        style ={{
+                            textAlign:'center',
+                            fontSize:"20px"}}>
+                    {
+                        this.state.users.map(user=>
                             <tr key = {user.id}>
-                                <td className='cell'><img style={this.photoStyle} src={user.img_url} alt={''}/></td>
-                                <td className='cell'>{user.dog_name}</td>
-                                <td className='cell'>{user.owner}</td>
-                                <td className='cell'>{user.contact}</td>
+                                <td
+                                    className='cell'>
+                                    <img
+                                        style={this.photoStyle}
+                                        src={user.img_url}
+                                        alt={''}/>
+                                </td>
+                                <td
+                                    className='cell'>
+                                    {user.dog_name}
+                                </td>
+                                <td
+                                    className='cell'>
+                                    {user.owner}
+                                </td>
+                                <td
+                                    className='cell'>
+                                    {user.contact}
+                                </td>
                             </tr>
                                 ) }
 

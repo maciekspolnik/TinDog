@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
-class LittleLogo extends Component {
+class Logo extends Component {
 
 
     render() {
@@ -11,15 +11,13 @@ class LittleLogo extends Component {
             <div className="logo">
                 <Link to="/">
                     <img src={'./logo.png'} alt="" style={{
-                        height: "100px",
-                        width: "100px",
+                        height: "80px",
+                        width: "80px",
                         marginRight: "1em"
-
                     }}/></Link>
-
             </div>
         );
     }
 }
 
-export default LittleLogo;
+export default Logo;

@@ -4,9 +4,6 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
-import "./../css/Login.css"
-import "./../css/main.css"
-
 import {postUserDetails} from "../services/user.service"
 import {useSelector} from "react-redux";
 
@@ -33,6 +30,9 @@ const Profile = (props) => {
     const { user: currentUser } = useSelector((state) => state.auth);
     const { message } = useSelector(state => state.message);
 
+    const state = {
+        selectedFile: null
+    }
 
     const onChangeDogName = (e) => {
         const dogName = e.target.value;
@@ -45,8 +45,7 @@ const Profile = (props) => {
     };
 
     const onChangeDogPhoto = (e) => {
-        const dogPhoto = e.target.value;
-        setDogPhoto(dogPhoto);
+        state.selectedFile = e.target.files[0]
     };
 
     const onChangeContact = (e) => {
@@ -54,13 +53,17 @@ const Profile = (props) => {
         setContact(contact);
     };
 
-    const handleLogin = (e) => {
+    const handleUpload = (e) => {
         e.preventDefault();
 
         setLoading(true);
-
         if (checkBtn.current.context._errors.length === 0) {
-            postUserDetails(currentUser.id, dogName, owner, dogPhoto, contact)
+            postUserDetails(
+                currentUser.id,
+                dogName,
+                owner,
+                "./img/"+state.selectedFile.name,
+                contact)
                 .then(() => {
                     props.history.push("/profile");
                     window.location.reload();
@@ -77,7 +80,7 @@ const Profile = (props) => {
     return (
    <div className="login-container">
        <div className="banner">Zmiana danych profilu</div>
-        <Form className='login' onSubmit={handleLogin} ref={form} >
+        <Form className='login' onSubmit={handleUpload} ref={form} >
 
 
             <Input
@@ -101,13 +104,13 @@ const Profile = (props) => {
             />
 
             <Input
-              type="text"
+              type="file"
               className="inputs"
               name="dog_photo"
               placeholder="Zdjęcie Psa"
               value={dogPhoto}
               onChange={onChangeDogPhoto}
-              validations={[required]}
+
             />
 
 
