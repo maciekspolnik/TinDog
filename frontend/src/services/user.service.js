@@ -1,11 +1,11 @@
 import axios from "axios";
 import authHeader from "./auth-header";
-const API_URL = "http://localhost:8080/api/test/";
+const API_URL = "http://localhost:8080/api/";
 
 
 export const getUserDetailsById = (id) => {
   return axios.get(
-      "http://localhost:8080/api/test/idetails?index="+id,
+      API_URL+"idetails?index="+id,
       { headers: authHeader() });
 };
 
@@ -22,12 +22,12 @@ export const postUserDetails = (id, dog_name, owner, img_url, contact) => {
 };
 
 export const getList = (id) => {
-    return axios.get("http://localhost:8080/api/test/list?index="+id,
+    return axios.get(API_URL+"list?index="+id,
         {headers: authHeader()})
 }
 
 export const createNewMatch = (idMatching, idMatched) => {
-    return axios.post('http://localhost:8080/api/matches/add',
+    return axios.post(API_URL+"matches/add",
         {
             idMatching,
             idMatched
@@ -36,7 +36,7 @@ export const createNewMatch = (idMatching, idMatched) => {
 }
 
 export const deleteMatches = (id) => {
-    return axios.delete('http://localhost:8080/api/matches/delete?id='+id,
+    return axios.delete(API_URL+"matches/delete?id="+id,
         {headers: authHeader()})
 }
 

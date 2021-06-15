@@ -97,11 +97,13 @@ public class UserController {
     }
 
     @PutMapping
+    @PreAuthorize("hasRole('USER')")
     public Users updateUser(@RequestBody Users user) {
         return userRepository.save(user);
     }
 
     @DeleteMapping
+    @PreAuthorize("hasRole('USER')")
     public void deleteUser(@RequestParam Long index){
         userRepository.deleteById(index);
     }
