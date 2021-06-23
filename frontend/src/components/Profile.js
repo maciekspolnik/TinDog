@@ -47,6 +47,7 @@ const Profile = (props) => {
 
     const onChangeDogPhoto = (e) => {
         zmienna = e.target.files[0].name
+        console.log(zmienna)
     };
 
     const onChangeContact = (e) => {
@@ -81,7 +82,7 @@ const Profile = (props) => {
     return (
    <div className="login-container">
        <div className="banner">Zmiana danych profilu</div>
-        <Form className='login' onSubmit={handleUpload} ref={form} >
+        <Form className='login' autocomplete="off" onSubmit={handleUpload} ref={form} >
 
 
             <Input
